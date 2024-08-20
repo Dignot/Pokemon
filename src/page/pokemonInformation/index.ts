@@ -1,0 +1,1 @@
+export { PokemonInformation } from "./ui";
