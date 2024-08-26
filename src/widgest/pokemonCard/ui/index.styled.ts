@@ -6,6 +6,7 @@ export const card = styled.div`
     flex-direction: column;
     align-items: center;
     position: relative;
+    cursor: "pointer";
 `;
 export const cardTitle = styled.h2`
     color: black;
