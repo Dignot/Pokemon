@@ -81,26 +81,7 @@ Error generating stack: `+o.message+`
     gap: 20px;
 `;ye.div`
     border: 1px solid black;
-`;const US=ye.div`
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-`,BS=ye.h2`
-    color: black;
-`,WS=ye("button")`
-    border: 0;
-    background: grey;
-    border-radius: 100px;
-    padding: 10px 20px;
-    cursor: pointer;
-`,HS=ye("button")(({favourites:e})=>({border:"none",color:e?"red":"blue",background:"none",cursor:"pointer",position:"absolute",top:"10px",right:"10px"})),VS=ye("svg")`
-    pointer-events: none;
-`,QS=e=>{const{favourites:t}=e,n=_a(),r=o=>{n(Eg(o.target.parentElement.id))},i=o=>{n(Sg(o.target.parentElement.id)),o.stopPropagation()};return T.jsxs(T.Fragment,{children:[T.jsx(HS,{type:"button",favourites:t,onClick:o=>{i(event),o.stopPropagation()},children:T.jsx(VS,{fill:"currentColor",height:"16px",width:"16px",version:"1.1",id:"Capa_1",viewBox:"0 0 51.997 51.997",children:T.jsx("path",{d:`M51.911,16.242C51.152,7.888,45.239,1.827,37.839,1.827c-4.93,0-9.444,2.653-11.984,6.905\r
-	c-2.517-4.307-6.846-6.906-11.697-6.906c-7.399,0-13.313,6.061-14.071,14.415c-0.06,0.369-0.306,2.311,0.442,5.478\r
-	c1.078,4.568,3.568,8.723,7.199,12.013l18.115,16.439l18.426-16.438c3.631-3.291,6.121-7.445,7.199-12.014\r
-	C52.216,18.553,51.97,16.611,51.911,16.242z`})})}),T.jsx(WS,{onClick:o=>{r(event),o.stopPropagation()},children:"Удалить"})]})},id=e=>{const t=_a(),n=Yh(),[r,i]=P.useState(!1),{data:o,name:l,favourites:u}=e;return P.useEffect(()=>{o===null?jw(l).then(s=>{t(xg(s.data)),i(!0)}):i(!0)},[]),r?T.jsx(T.Fragment,{children:T.jsxs(US,{id:l,onClick:()=>n(`pokemon/${l}`),children:[T.jsx(BS,{children:l}),T.jsx("img",{src:o.sprites.front_default,alt:""}),T.jsx(QS,{favourites:u})]})}):"loading"},KS=ye("button")`
+`;const US=ye("button")`
     padding: 10px 15px;
     border: 0;
     background: blue;
@@ -108,14 +89,34 @@ Error generating stack: `+o.message+`
     border-radius: 100px;
     color: white;
     text-decoration: none;
-`,qS=e=>{const{favourite:t,is:n}=e;return T.jsx(T.Fragment,{children:T.jsx(KS,{onClick:()=>{n()},children:t?"Избранное":"Назад"})})},YS=ye.div`
+`,BS=e=>{const{favourite:t,is:n}=e;return T.jsx(T.Fragment,{children:T.jsx(US,{onClick:()=>{n()},children:t?"Избранное":"Назад"})})},WS=ye.div`
     display: flex;
     align-items: center;
     max-width: 940px;
     margin: 0 auto;
-`,GS=ye.h1`
+`,HS=ye.h1`
     flex: 1;
-`,XS=e=>{const{favourite:t,is:n}=e;return T.jsxs(YS,{children:[T.jsx(GS,{children:"Pokemon"}),T.jsx(qS,{favourite:t,is:n})]})},JS=()=>{const[e,t]=P.useState(!0),n=()=>{t(!e)},r=zo(o=>o.pokemonCard.pokemon),i=zo(o=>o.pokemonCard.favouritesPokemon);return T.jsxs(T.Fragment,{children:[T.jsx(XS,{favourite:e,is:n}),T.jsx(FS,{children:e?r.map(o=>T.jsx(id,{...o})):i.map(o=>T.jsx(id,{...o}))})]})},ZS=()=>{const e=_a(),t=zo(n=>n.pokemonCard.pokemon);return P.useEffect(()=>{t.length===0&&Iw().then(n=>n.data.results.map(r=>({name:r.name,data:null,like:!1}))).then(n=>e(kg(n)))},[]),T.jsx(JS,{})},bS=ye("div")`
+`,VS=e=>{const{favourite:t,is:n}=e;return T.jsxs(WS,{children:[T.jsx(HS,{children:"Pokemon"}),T.jsx(BS,{favourite:t,is:n})]})},QS=ye.div`
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+`,KS=ye.h2`
+    color: black;
+`,qS=ye("button")`
+    border: 0;
+    background: grey;
+    border-radius: 100px;
+    padding: 10px 20px;
+    cursor: pointer;
+`,YS=ye("button")(({favourites:e})=>({border:"none",color:e?"red":"blue",background:"none",cursor:"pointer",position:"absolute",top:"10px",right:"10px"})),GS=ye("svg")`
+    pointer-events: none;
+`,XS=e=>{const{favourites:t}=e,n=_a(),r=o=>{n(Eg(o.target.parentElement.id))},i=o=>{n(Sg(o.target.parentElement.id)),o.stopPropagation()};return T.jsxs(T.Fragment,{children:[T.jsx(YS,{type:"button",favourites:t,onClick:o=>{i(event),o.stopPropagation()},children:T.jsx(GS,{fill:"currentColor",height:"16px",width:"16px",version:"1.1",id:"Capa_1",viewBox:"0 0 51.997 51.997",children:T.jsx("path",{d:`M51.911,16.242C51.152,7.888,45.239,1.827,37.839,1.827c-4.93,0-9.444,2.653-11.984,6.905\r
+	c-2.517-4.307-6.846-6.906-11.697-6.906c-7.399,0-13.313,6.061-14.071,14.415c-0.06,0.369-0.306,2.311,0.442,5.478\r
+	c1.078,4.568,3.568,8.723,7.199,12.013l18.115,16.439l18.426-16.438c3.631-3.291,6.121-7.445,7.199-12.014\r
+	C52.216,18.553,51.97,16.611,51.911,16.242z`})})}),T.jsx(qS,{onClick:o=>{r(event),o.stopPropagation()},children:"Удалить"})]})},id=e=>{const t=_a(),n=Yh(),[r,i]=P.useState(!1),{data:o,name:l,favourites:u}=e;return P.useEffect(()=>{o===null?jw(l).then(s=>{t(xg(s.data)),i(!0)}):i(!0)},[]),r?T.jsx(T.Fragment,{children:T.jsxs(QS,{id:l,onClick:()=>n(`pokemon/${l}`),children:[T.jsx(KS,{children:l}),T.jsx("img",{src:o.sprites.front_default,alt:""}),T.jsx(XS,{favourites:u})]})}):"loading"},JS=()=>{const[e,t]=P.useState(!0),n=()=>{t(!e)},r=zo(o=>o.pokemonCard.pokemon),i=zo(o=>o.pokemonCard.favouritesPokemon);return T.jsxs(T.Fragment,{children:[T.jsx(VS,{favourite:e,is:n}),T.jsx(FS,{children:e?r.map(o=>T.jsx(id,{...o})):i.map(o=>T.jsx(id,{...o}))})]})},ZS=()=>{const e=_a(),t=zo(n=>n.pokemonCard.pokemon);return P.useEffect(()=>{t.length===0&&Iw().then(n=>n.data.results.map(r=>({name:r.name,data:null,like:!1}))).then(n=>e(kg(n)))},[]),T.jsx(JS,{})},bS=ye("div")`
     width: 300px;
     margin: 0 auto;
     display: flex;
